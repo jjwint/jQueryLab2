@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css" />
+	<title>jQuery Lab: Part 1</title>
+</head>
+<body>
+
+	<h1 id="tableFinder" >Table Finder</h1>
+	<h2 id="pickTable">Pick your table now</h2>
+
+	<div id="container">
+		<div id="row1">
+			<div class="tables available"><span class="tableNum" id="table1">1</span></div>
+			<div class="tables available"><span class="tableNum" id="table2">2</span></div>
+			<div class="tables available"><span class="tableNum" id="table3">3</span></div>
+		</div>
+		<div id="row2">
+			<div class="tables available"><span class="tableNum" id="table4">4</span></div>
+			<div class="tables available"><span class="tableNum" id="table5">5</span></div>
+			<div class="tables available"><span class="tableNum" id="table6">6</span></div>
+		</div>
+		<div id="row3">
+			<div class="tables available"><span class="tableNum" id="table7">7</span></div>
+			<div class="tables available"><span class="tableNum" id="table8">8</span></div>
+			<div class="tables available"><span class="tableNum" id="table9">9</span></div>
+		</div>
+	</div>
+
+	<div id="hiddenForm" class="hidden">
+		<form>
+			<button type="button" id="quitButton">x</button>
+			<h1 id="newReservation">New Reservation</h1>
+			<h2 id="tableNumber">Table Number: <span id="tableDigit"></span></h2>
+			<div id="flexInputs">
+				<input id="name" type="text" placeholder="Name" />
+				<input id="phoneNumber" type="text" placeholder="Phone Number" />
+				<input id="partyNumber" type="text" placeholder="Number In Party" />
+				<button type="button" id="saveButton">SAVE</button>
+			</div>
+		</form>
+	</div>
+
+	<script src="jQuery-3.3.1.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
