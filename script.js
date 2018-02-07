@@ -28,6 +28,7 @@ $(document).ready(function(){
 		$(table).removeClass("available");
 		$(table).addClass("notAllowed");
 		$("#hiddenForm").addClass("hidden");
+		retrieveTableData();
 	});
 
 	$("#quitButton").click(function() {
@@ -49,5 +50,11 @@ $(document).ready(function(){
 	}, function() {
 		$(tableHover).css("cursor", "");
 	});
+
+	function retrieveTableData() {
+		var name = $("#name").val();
+		var partySize = $("#partySize").val();
+		table.append("<div class='hoverTableInfo'><div>Guest Name: " + name + "</div><div>Size of Party: " + partySize + "</div></div>");
+	}
 	
 });
