@@ -10,12 +10,11 @@ $(document).ready(function(){
 
 	$(".tables").hover(function() {
 		tableHover = $(this);
-	})
+	});
 
-	$(".tables").click(function() {
-		if (table.hasClass("available")) {
-			$("#hiddenForm").removeClass("hidden");
-		}
+	$(".available").click(function() {
+		$("#hiddenForm").removeClass("hidden");
+		$("#hiddenForm").slideDown();
 	});
 
 	$(".tables").click(function() {
