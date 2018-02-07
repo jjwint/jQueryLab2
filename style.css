@@ -144,13 +144,6 @@ h2, span {
 	padding-top: 50px;
 }
 
-#hoverTableInfo {
-	background-color: #ADAAAA;
-	border: 1px solid black;
-	width: 100px;
-	height: 60px;
-}
-
 .notAllowed {
 	cursor: not-allowed;
 }
@@ -159,6 +152,11 @@ h2, span {
 	background-color: pink;
 }
 
-
+.tables .hoverTableInfo {
+	background-color: #ADAAAA;
+	border: 2px solid black;
+	width: 120px;
+	height: 40px;
+}
 
 

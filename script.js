@@ -17,6 +17,10 @@ $(document).ready(function(){
 		$("#hiddenForm").slideDown();
 	});
 
+	$(".reserved").hover(function() {
+		$(".hoverTableInfo").css("display", "block");
+	});
+
 	$(".tables").click(function() {
 		var digit = $(this).text();
 		$("#tableDigit").text(digit);
@@ -53,7 +57,7 @@ $(document).ready(function(){
 	function retrieveTableData() {
 		var name = $("#name").val();
 		var partySize = $("#partySize").val();
-		table.append("<div class='hoverTableInfo'><div>Guest Name: " + name + "</div><div>Size of Party: " + partySize + "</div></div>");
+		table.append("<div class='hoverTableInfo'><div>Name: " + name + "</div><div>Size of Party: " + partySize + "</div></div>");
 	}
 	
 });
