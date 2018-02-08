@@ -148,10 +148,6 @@ h2, span {
 	cursor: not-allowed;
 }
 
-.hoverClass {
-	background-color: pink;
-}
-
 .tables .hoverTableInfo {
 	background-color: #ADAAAA;
 	border: 2px solid black;
@@ -159,4 +155,7 @@ h2, span {
 	height: 40px;
 }
 
+.hoverTableInfo {
+	display: none;
+}
 
