@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
 	var table;
-	var nameInput = document.getElementById("name");
-	var userName = nameInput.value;
+	var userName;
+	var phoneNumber;
+	var partySize;
 
 //hides hidden reservation form on page load
 	$("#hiddenForm").hide();
@@ -39,6 +40,9 @@ $(document).ready(function(){
 		$(table).addClass("notAllowed");
 		$("#hiddenForm").slideUp(600);
 		retrieveTableData();
+		var userName = $("#name").val("");
+		var phoneNumber = $("#phoneNumber").val("");
+		var partySize = $("#partySize").val("");
 	});
 
 //when the user x's out of the reservation form, it slides up and out of view
@@ -67,12 +71,22 @@ $(document).ready(function(){
 		$(tableHover).css("cursor", "");
 	});
 
+//displays reservation info of reserved tables when hovered over
+	$(".tables").hover(function() {
+		if (tableHover.hasClass("reserved")) {
+			$("#hoverTableInfo").show();
+		}
+	}, function() {
+		$("#hoverTableInfo").hide();
+	});
+
 //retreives the name and party size inputs from reservation form; 
 //appends them to the table in a child div
 	function retrieveTableData() {
 		var name = $("#name").val();
 		var partySize = $("#partySize").val();
-		table.append("<div class='hoverTableInfo'><div>Name: " + name + "</div><div>Size of Party: " + partySize + "</div></div>");
+		table.append("<div id='hoverTableInfo' 'class=hidden'><div>Name: " + name + 
+			"</div><div>Size of Party: " + partySize + "</div></div>");
 	}
 	
 });

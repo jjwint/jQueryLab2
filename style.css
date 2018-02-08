@@ -148,14 +148,15 @@ h2, span {
 	cursor: not-allowed;
 }
 
-.tables .hoverTableInfo {
+#hoverTableInfo {
 	background-color: #ADAAAA;
 	border: 2px solid black;
 	width: 120px;
 	height: 40px;
+/*	display: none;*/
 }
 
-.hoverTableInfo {
-	display: none;
-}
+
+
+
 
